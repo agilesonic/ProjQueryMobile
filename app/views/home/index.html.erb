@@ -1,4 +1,8 @@
 <div data-role="page">
+	<style>
+		.ui-header .ui-title, .ui-footer .ui-title { margin-right: 0 !important; margin-left: 0 !important; }
+	</style>
+
 	<div data-role="header">
 		<h1>Pro jQuery Mobile</h1>
 	</div>
@@ -9,7 +13,7 @@
 			<% @files.each do |file| %>
 				<% if file.to_s != ".." || @dir != "/" %>
 				<li>
-					<a href="<%= file_link @dir, file %>"><%= File.basename file %></a>
+					<a href="<%= file_link @dir, file %>" rel="external"><%= File.basename file %></a>
 				</li>
 				<% end %>
 			<% end %>
