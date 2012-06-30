@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ProjQueryMobile</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
+  <title>Pro jQuery Mobile</title>
+  <%= stylesheet_link_tag    "jquery.mobile-css-1.1.0" %>
+  <%= javascript_include_tag "jquery-1.7.2.min" %>
+  <script type="text/javascript">
+	$(document).bind("mobileinit", function(){
+	  $.mobile.touchOverflowEnabled = true;
+      $.mobile.page.prototype.options.addBackBtn = true;
+	});
+  </script>
+  <%= javascript_include_tag "jquery.mobile-js-1.1.0" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
