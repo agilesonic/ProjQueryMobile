@@ -8,14 +8,21 @@
 	</div>
 
 	<div data-role="content">
-		<ul data-role="listview" data-filter="true" data-divider-theme="b">
+		<ul data-role="listview" data-filter="true" data-divider-theme="b" data-split-icon="grid" data-split-theme="d">
 			<li data-role="list-divider">Path: <strong><%= @dir%></strong></li>
 			<% @files.each do |file| %>
-				<% if file.to_s != ".." || @dir != "/" %>
-				<li>
-					<a href="<%= file_link @dir, file %>" rel="external"><%= File.basename file %></a>
-				</li>
-				<% end %>
+			<% if file.to_s != ".." || @dir != "/" %>
+			<% if dir? @dir, file %>
+			<li>
+				<a href="<%= dir_link @dir, file %>" data-icon="none"><%= File.basename file %></a>
+			</li>
+			<% else %>
+			<li>
+				<a href="<%= file_link @dir, file %>" data-icon="none" rel="external"><%= File.basename file %></a>
+				<a href="<%= code_link @dir, file %>">Code</a>
+			</li>
+			<% end %>
+			<% end %>
 			<% end %>
 		</ul>
 	</div>

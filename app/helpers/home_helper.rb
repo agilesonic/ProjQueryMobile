@@ -1,10 +1,18 @@
 module HomeHelper
-  def file_link(dir, file)
+  def dir?(dir, file)
     path = File.join HomeController::PAGE_DIR, dir, file
-    if File.directory? path
+    File.directory? path
+  end
+  
+  def dir_link(dir, file)
       "/home/index?dir=" + File.join(dir, file)
-    else
+  end
+
+  def file_link(dir, file)
       "/pages/" + File.join(dir, file)
-    end
+  end
+  
+  def code_link(dir, file)
+      "/home/code?dir=" + File.join(dir, file)
   end
 end
