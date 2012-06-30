@@ -1,0 +1,48 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8">
+	<title>Forms</title> 
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0;">
+	<link rel="stylesheet" type="text/css" href="../jquery.mobile-min.css" /> 
+	<script type="text/javascript" src="../jquery-min.js"></script>
+	<script type="text/javascript" src="../jquery.mobile-min.js"></script> 
+</head> 
+<body> 
+
+<div data-role="page">
+	<div data-role="header">
+		<h1>Dates</h1>
+	</div>
+
+	<div data-role="content">
+	  <form id="test" id="test" action="#" method="post">
+		
+	         <label for="time">Time:</label>
+	         <input type="time" name="time" id="time" value="" placeholder="Time"/>
+			
+	         <label for="date">Date:</label>
+	         <input type="date" name="date" id="date" value="" />
+			
+	         <label for="month">Month:</label>
+	         <input type="month" name="month" id="month" value="" />
+			
+	         <label for="week">Week:</label>
+	         <input type="week" name="week" id="week" value="" />
+			
+	         <label for="datetime">Datetime:</label>
+	         <input type="datetime" name="datetime" id="datetime" value="" />
+			
+	         <label for="datetime-l">Datetime local:</label>
+	         <input type="datetime-local" name="datetime-l" id="datetime-l" value="" />
+			
+	         <label for="color">Color:</label>
+	         <input type="color" name="color" id="color" value="" />
+		
+	  </form>			 			 		 			 
+	</div>
+</div>
+
+</body>
+</html>
+
